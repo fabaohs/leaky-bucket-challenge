@@ -1,11 +1,21 @@
 ﻿import koa from "koa";
 import setupRoutes from "./routes/index";
+import dotenv from "dotenv";
+import { connectDb } from "./configs/db";
 
-const app = new koa();
+dotenv.config();
 
-const port = process.env.PORT || 5000;
+async function startServer() {
+  const app = new koa();
 
-app.use(setupRoutes.routes());
-app.use(setupRoutes.allowedMethods());
+  const port = process.env.PORT || 5000;
 
-app.listen(port, () => console.log(`API Running on port ${port}`));
+  await connectDb();
+
+  app.use(setupRoutes.routes());
+  app.use(setupRoutes.allowedMethods());
+
+  app.listen(port, () => console.log(`API Running on port ${port}`));
+}
+
+startServer();
