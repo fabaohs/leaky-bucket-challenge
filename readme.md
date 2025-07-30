@@ -15,8 +15,8 @@ Bellow are my plan to implement this challenge
 
 ### **Simple User System**
 
-- [ ... ] Create login endpoint that returns Bearer token
-- [ ] Implement authentication middleware to validate tokens and extract user info
+- [x] Create login endpoint that returns Bearer token
+- [ ... ] Implement authentication middleware to validate tokens and extract user info
 
 ### **Basic Testing**
 
