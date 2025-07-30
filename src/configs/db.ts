@@ -1,4 +1,5 @@
 ﻿import mongoose from "mongoose";
+import { populateUsers } from "./seed";
 
 export async function connectDb() {
   const db_url = process.env.DB_URL!;
@@ -6,6 +7,7 @@ export async function connectDb() {
     console.log("Connecting to mongo!");
     await mongoose.connect(db_url);
     console.log("Mongo connected!");
+    await populateUsers();
   } catch (e) {
     throw new Error("Something went wrong\n" + e);
   }
