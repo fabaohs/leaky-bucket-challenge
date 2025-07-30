@@ -12,6 +12,7 @@
   "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a",
   "devDependencies": {
     "@koa/router": "^13.1.1",
+    "@types/bcryptjs": "^3.0.0",
     "@types/koa": "^2.15.0",
     "@types/koa-bodyparser": "^4.3.12",
     "@types/koa__cors": "^5.0.0",
@@ -23,6 +24,7 @@
   },
   "dependencies": {
     "@koa/cors": "^5.0.0",
+    "bcryptjs": "^3.0.2",
     "dotenv": "^17.2.0",
     "koa": "^3.0.0",
     "koa-bodyparser": "^4.4.1",
