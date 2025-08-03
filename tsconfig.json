@@ -8,6 +8,11 @@
     "esModuleInterop": true,
     "skipLibCheck": true
   },
+  "paths": {
+    "@/*": ["./src/*"],
+    "@middlewares/*": ["./src/middlewares/*"],
+    "@utils/*": ["./src/utils/*"]
+  },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }

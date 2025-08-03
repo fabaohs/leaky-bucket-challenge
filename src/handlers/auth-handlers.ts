@@ -1,9 +1,5 @@
 ﻿import { Context } from "koa";
-import {
-  badRequest,
-  ERROR_CODES,
-  internalServerError,
-} from "../middlewares/error-middleware";
+import { badRequest, ERROR_CODES, internalServerError } from "../utils/errors";
 import { userModel } from "../schemas/user";
 import hashUtils from "../utils/hash";
 import jwtUtils from "../utils/jwt";
