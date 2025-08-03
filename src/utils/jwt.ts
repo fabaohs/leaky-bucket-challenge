@@ -18,6 +18,11 @@ const genJwt = (claims: IUser) => {
   );
 };
 
+const verifyJwt = (token: string) => {
+  return jwt.verify(token, process.env.JWT_SECRET!);
+};
+
 export default {
   genJwt,
+  verifyJwt,
 };
