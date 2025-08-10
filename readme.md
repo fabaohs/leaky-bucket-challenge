@@ -20,8 +20,8 @@ Bellow are my plan to implement this challenge
 
 ### **Basic Testing**
 
-- [ ... ] Test login flow and token generation
-- [ ] Test middleware with valid/invalid tokens
+- [x] Test login flow and token generation
+- [...] Test middleware with valid/invalid tokens
 
 ---
 
