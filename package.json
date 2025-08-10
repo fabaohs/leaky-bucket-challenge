@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsnd --respawn ./src/index.ts"
+    "dev": "tsnd --respawn ./src/index.ts",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
@@ -19,9 +20,11 @@
     "@types/koa__cors": "^5.0.0",
     "@types/koa__router": "^12.0.4",
     "@types/node": "^24.0.15",
+    "@vitest/ui": "^3.2.4",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
     "@koa/cors": "^5.0.0",

@@ -8,7 +8,7 @@ Bellow are my plan to implement this challenge
 
 ## TO DOs:
 
-> ⚠️ **Disclaimer:** I used AI for format the TO DOs xD.
+> ⚠️ **Disclaimer:** I used AI for format the TO DOs xD. <br/>
 > ⚠️ **Disclaimer 2:** The to-do list may change as I go through the challenge. This list is just a general idea of how I plan to do this challenge.
 
 ## **Basic Authentication**

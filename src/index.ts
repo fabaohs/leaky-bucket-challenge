@@ -9,10 +9,8 @@ import { errorMiddleware } from "./middlewares/error-middleware";
 dotenv.config();
 
 async function startServer() {
-  const app = new koa();
-
   const port = process.env.PORT || 5000;
-
+  const app = new koa();
   await connectDb();
 
   app.use(
