@@ -1,9 +1,5 @@
 ﻿import { Context, Next } from "koa";
-import {
-  ERROR_CODES,
-  internalServerError,
-  unauthorized,
-} from "../utils/errors";
+import { ERROR_CODES, unauthorized } from "../utils/errors";
 
 import jwtUtils from "../utils/jwt";
 
