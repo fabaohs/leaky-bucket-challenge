@@ -1,5 +1,4 @@
-﻿import { describe, it, expect } from "vitest";
-import jwtUtils from "../../utils/jwt";
+﻿import { describe, it, expect, beforeEach } from "vitest";
 
 describe("Signin", () => {
   it("should return bad request with bad input", async () => {
