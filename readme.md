@@ -8,20 +8,20 @@ Bellow are my plan to implement this challenge
 
 ## TO DOs:
 
-> ⚠️ **Disclaimer:** I used AI for format the TO DOs xD.
+> ⚠️ **Disclaimer:** I used AI for format the TO DOs xD. <br/>
 > ⚠️ **Disclaimer 2:** The to-do list may change as I go through the challenge. This list is just a general idea of how I plan to do this challenge.
 
 ## **Basic Authentication**
 
 ### **Simple User System**
 
-- [ ... ] Create login endpoint that returns Bearer token
-- [ ] Implement authentication middleware to validate tokens and extract user info
+- [x] Create login endpoint that returns Bearer token
+- [x] Implement authentication middleware to validate tokens and extract user info
 
 ### **Basic Testing**
 
-- [ ] Test login flow and token generation
-- [ ] Test middleware with valid/invalid tokens
+- [x] Test login flow and token generation
+- [...] Test middleware with valid/invalid tokens
 
 ---
 
