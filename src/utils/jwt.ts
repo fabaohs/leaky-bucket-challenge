@@ -1,5 +1,6 @@
 ﻿import jwt from "jsonwebtoken";
 import { IUser } from "../schemas/user";
+import { ENV } from "../configs/env";
 
 const genJwt = (claims: IUser) => {
   const { _id, email, name } = claims;
@@ -10,7 +11,7 @@ const genJwt = (claims: IUser) => {
       email,
       name,
     },
-    process.env.JWT_SECRET!,
+    ENV.JWT_SECRET!,
     {
       expiresIn: "1h",
       subject: String(_id),
@@ -19,7 +20,7 @@ const genJwt = (claims: IUser) => {
 };
 
 const verifyJwt = (token: string) => {
-  return jwt.verify(token, process.env.JWT_SECRET!);
+  return jwt.verify(token, ENV.JWT_SECRET!);
 };
 
 export default {

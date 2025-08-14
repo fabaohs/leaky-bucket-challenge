@@ -33,6 +33,7 @@
     "jsonwebtoken": "^9.0.2",
     "koa": "^3.0.0",
     "koa-bodyparser": "^4.4.1",
-    "mongoose": "^8.16.4"
+    "mongoose": "^8.16.4",
+    "redis": "^5.8.1"
   }
 }
