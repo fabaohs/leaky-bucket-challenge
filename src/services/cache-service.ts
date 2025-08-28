@@ -10,14 +10,22 @@ const deleteCacheValue = async (key: string) => {
   }
 };
 
-const setCacheValue = async <T>(key: string, value: T, timeSpan?: number) => {
+const increaseTokens = async (key: string) => {
   try {
-    const jsonString = JSON.stringify(value);
-    const options = timeSpan ? { EX: timeSpan } : {};
-    await cache.set(key, jsonString, options);
+    return await cache.incr(key);
   } catch (e) {
     throw new Error(
-      `Failed to set JSON cache value for key "${key}": ${e.message}`
+      `Failed to increase cache value for key "${key}": ${e.message}`
+    );
+  }
+};
+
+const decreaseTokens = async (key: string) => {
+  try {
+    return await cache.decr(key);
+  } catch (e) {
+    throw new Error(
+      `Failed to decrease cache value for key "${key}": ${e.message}`
     );
   }
 };
@@ -35,7 +43,8 @@ const getCacheValue = async <T>(key: string): Promise<T | null> => {
 };
 
 export default {
-  setCacheValue,
+  increaseTokens,
+  decreaseTokens,
   getCacheValue,
   deleteCacheValue,
 };
