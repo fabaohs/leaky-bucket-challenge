@@ -30,8 +30,8 @@ Bellow are my plan to implement this challenge
 ### **Token Storage**
 
 - [x] Set up Redis connection
-- [ ] Implement functions to get/set user tokens
-- [ ] Initialize new users with default token amount
+- [x] Implement functions to get/set user tokens
+- [x] Initialize new users with default token amount
 
 ### **Basic Algorithm**
 
