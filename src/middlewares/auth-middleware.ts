@@ -1,7 +1,7 @@
 ﻿import { Context, Next } from "koa";
 import { ERROR_CODES, unauthorized } from "../utils/errors";
 
-import jwtUtils from "../utils/jwt";
+import jwtUtils, { IJwtClaims } from "../utils/jwt";
 
 export const authMiddleware = async (ctx: Context, next: Next) => {
   const token = ctx.request.headers?.authorization;
@@ -9,7 +9,9 @@ export const authMiddleware = async (ctx: Context, next: Next) => {
     throw unauthorized(ERROR_CODES.UNAUTHORIZED);
   }
 
-  const tokenPayload = jwtUtils.verifyJwt(token.split(" ")[1]);
+  const tokenPayload: IJwtClaims | null = jwtUtils.verifyJwt(
+    token.split(" ")[1]
+  );
 
   if (!tokenPayload) {
     throw unauthorized(ERROR_CODES.UNAUTHORIZED);
