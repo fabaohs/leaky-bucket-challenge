@@ -1,13 +1,13 @@
 ﻿import mongoose, { Types } from "mongoose";
 import { createClient } from "redis";
 import { ENV } from "../configs/env";
-import { PREFIX_CACHE_KEY } from "../utils/constants";
+
+import cacheUtils from "../utils/cache";
 
 export interface IUser {
   name: string;
   email: string;
   password: string;
-  tokens: number;
   _id: Types.ObjectId;
 }
 
@@ -25,7 +25,7 @@ schema.post("save", async (doc) => {
 
   await redisClient.connect();
   const _id = doc._id;
-  const cacheKey = `${PREFIX_CACHE_KEY}:${_id}:TOKENS`;
+  const cacheKey = cacheUtils.mountUserTokenKey(_id.toString());
   await redisClient.set(cacheKey, 10);
 });
 
