@@ -36,7 +36,7 @@ Bellow are my plan to implement this challenge
 ### **Basic Algorithm**
 
 - [x] Create function to check if user has available tokens
-- [...] Implement token consumption logic
+- [x] Implement token consumption logic
 - [ ] Implement token restoration logic with maximum limit
 
 ### **Rate Limiting Middleware**
