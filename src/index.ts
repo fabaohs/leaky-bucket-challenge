@@ -10,8 +10,7 @@ import { connectCache } from "./configs/cache";
 async function startServer() {
   const port = ENV.PORT;
   const app = new koa();
-  await connectDb();
-  await connectCache();
+  await Promise.all([connectDb(), connectCache()]);
 
   app.use(
     cors({
