@@ -2,16 +2,15 @@
 import cors from "@koa/cors";
 import bodyParser from "koa-bodyparser";
 import setupRoutes from "./routes/index";
-import dotenv from "dotenv";
 import { connectDb } from "./configs/db";
 import { errorMiddleware } from "./middlewares/error-middleware";
-
-dotenv.config();
+import { ENV } from "./configs/env";
+import { connectCache } from "./configs/cache";
 
 async function startServer() {
-  const port = process.env.PORT || 5000;
+  const port = ENV.PORT;
   const app = new koa();
-  await connectDb();
+  await Promise.all([connectDb(), connectCache()]);
 
   app.use(
     cors({

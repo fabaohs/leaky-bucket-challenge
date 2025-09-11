@@ -1,11 +1,17 @@
 ﻿import { Context, Next } from "koa";
 import { AppError, ERROR_CODES, normalizedDefaultMsgs } from "../utils/errors";
-
+import bucketService from "../services/bucket-service";
 export const errorMiddleware = async (ctx: Context, next: Next) => {
   try {
     await next();
   } catch (e) {
-    // Handled error
+    // Here we decrease user tokens after request
+    if (ctx.state.user) {
+      const user = ctx.state.user;
+      await bucketService.consumeToken(user._id.toString());
+    }
+
+    // Handle error
     if (e.type && e.type === "AppError") {
       const error: AppError = e;
 
