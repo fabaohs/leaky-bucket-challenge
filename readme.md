@@ -37,13 +37,13 @@ Bellow are my plan to implement this challenge
 
 - [x] Create function to check if user has available tokens
 - [x] Implement token consumption logic
-- [ ] Implement token restoration logic with maximum limit
+- [x] Implement token restoration logic with maximum limit
 
 ### **Rate Limiting Middleware**
 
-- [ ] Create middleware to apply rate limiting
-- [ ] Return appropriate error when no tokens available
-- [ ] Consume token before processing request
+- [x] Create middleware to apply rate limiting
+- [x] Return appropriate error when no tokens available
+- [x] Consume token before processing request
 
 ---
 
@@ -51,7 +51,7 @@ Bellow are my plan to implement this challenge
 
 ### **Basic Endpoint**
 
-- [ ] Create PIX transaction endpoint with required fields
+- [...] Create PIX transaction endpoint with required fields
 - [ ] Add input validation
 - [ ] Simulate PIX processing with random success/failure
 - [ ] Implement token logic based on transaction result
